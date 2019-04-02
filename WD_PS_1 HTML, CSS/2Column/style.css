@@ -1,0 +1,41 @@
+body {
+  margin: 40px   ;
+}
+
+.sidebar {
+        grid-area: sidebar;
+    }
+
+    
+    .content {
+        grid-area: content;
+    }
+
+    .header {
+        grid-area: header;
+    }
+
+    .footer {
+        grid-area: footer;
+    }
+
+  .wrapper {
+    min-height: 100vh;
+    display: grid;
+    grid-gap: 1em;
+        
+    grid-template-areas:
+      "header  header  "
+      "sidebar content "
+      "footer  footer  ";
+       
+   }
+    
+  .box {
+    background-color: #f9f;
+    color: #000;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 100%; 
+  }
+ 	
