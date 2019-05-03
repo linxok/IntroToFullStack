@@ -1,8 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a1c69efc-109d-492c-b827-4020052354a4" name="Default Changelist" comment="">
+    <list default="true" id="a1c69efc-109d-492c-b827-4020052354a4" name="Default Changelist" comment="work on the bugs">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WD_PS_1 HTML, CSS/2Column/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/WD_PS_1 HTML, CSS/2Column/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WD_PS_1 HTML, CSS/3Column/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/WD_PS_1 HTML, CSS/3Column/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WD_PS_1 HTML, CSS/Landing/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/WD_PS_1 HTML, CSS/Landing/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WD_PS_1 HTML, CSS/Landing/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/WD_PS_1 HTML, CSS/Landing/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WD_PS_1 HTML, CSS/Trening/StarterFile.html" beforeDir="false" afterPath="$PROJECT_DIR$/WD_PS_1 HTML, CSS/Trening/Trening.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -11,21 +16,12 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/WD_PS_1 HTML, CSS/2Column/2column.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="4" column="57" selection-start-line="4" selection-start-column="57" selection-end-line="4" selection-end-column="57" />
-            </state>
-          </provider>
-        </entry>
-      </file>
+    <leaf>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/WD_PS_1 HTML, CSS/2Column/style.css">
+        <entry file="file://$PROJECT_DIR$/WD_PS_1 HTML, CSS/Landing/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="7" selection-start-line="7" selection-end-line="7" />
+            <state relative-caret-position="270">
+              <caret line="18" column="47" selection-start-line="18" selection-start-column="47" selection-end-line="18" selection-end-column="47" />
             </state>
           </provider>
         </entry>
@@ -34,6 +30,17 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/WD_PS_1 HTML, CSS/Trening/Trening.html" />
+        <option value="$PROJECT_DIR$/WD_PS_1 HTML, CSS/2Column/style.css" />
+        <option value="$PROJECT_DIR$/WD_PS_1 HTML, CSS/3Column/style.css" />
+        <option value="$PROJECT_DIR$/WD_PS_1 HTML, CSS/Landing/style.css" />
+        <option value="$PROJECT_DIR$/WD_PS_1 HTML, CSS/Landing/index.html" />
+      </list>
+    </option>
   </component>
   <component name="ProjectConfigurationFiles">
     <option name="files">
@@ -56,7 +63,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -64,17 +70,49 @@
               <item name="IntroToFullStack" type="b2602c69:ProjectViewProjectNode" />
               <item name="IntroToFullStack" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="IntroToFullStack" type="b2602c69:ProjectViewProjectNode" />
+              <item name="IntroToFullStack" type="462c0819:PsiDirectoryNode" />
+              <item name="WD_PS_1 HTML, CSS" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="IntroToFullStack" type="b2602c69:ProjectViewProjectNode" />
+              <item name="IntroToFullStack" type="462c0819:PsiDirectoryNode" />
+              <item name="WD_PS_1 HTML, CSS" type="462c0819:PsiDirectoryNode" />
+              <item name="2Column" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="IntroToFullStack" type="b2602c69:ProjectViewProjectNode" />
+              <item name="IntroToFullStack" type="462c0819:PsiDirectoryNode" />
+              <item name="WD_PS_1 HTML, CSS" type="462c0819:PsiDirectoryNode" />
+              <item name="3Column" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="IntroToFullStack" type="b2602c69:ProjectViewProjectNode" />
+              <item name="IntroToFullStack" type="462c0819:PsiDirectoryNode" />
+              <item name="WD_PS_1 HTML, CSS" type="462c0819:PsiDirectoryNode" />
+              <item name="Landing" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="IntroToFullStack" type="b2602c69:ProjectViewProjectNode" />
+              <item name="IntroToFullStack" type="462c0819:PsiDirectoryNode" />
+              <item name="WD_PS_1 HTML, CSS" type="462c0819:PsiDirectoryNode" />
+              <item name="Trening" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../introFSform" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="settings.editor.selected.configurable" value="reference.idesettings.emmet.css" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -88,6 +126,11 @@
       </list>
     </option>
   </component>
+  <component name="RunManager">
+    <configuration name="Unnamed" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" nameIsGenerated="true" path="">
+      <method v="2" />
+    </configuration>
+  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -100,19 +143,26 @@
       <updated>1554311819109</updated>
       <workItem from="1554311821085" duration="1592000" />
       <workItem from="1554318646262" duration="635000" />
+      <workItem from="1556562914949" duration="40000" />
+      <workItem from="1556562971861" duration="91000" />
+      <workItem from="1556705774590" duration="591000" />
+      <workItem from="1556706729973" duration="640000" />
+      <workItem from="1556707521666" duration="53000" />
+      <workItem from="1556896866623" duration="5458000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2227000" />
+    <option name="totallyTimeSpent" value="9100000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="3" width="1366" height="764" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25377643" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.27643505" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Messages" weight="0.32934132" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" />
@@ -174,11 +224,35 @@
       </map>
     </option>
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="work on the bugs" />
+    <option name="LAST_COMMIT_MESSAGE" value="work on the bugs" />
+  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/WD_PS_1 HTML, CSS/Trening/StarterFile.html">
+    <entry file="file://$PROJECT_DIR$/WD_PS_1 HTML, CSS/3Column/style.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WD_PS_1 HTML, CSS/2Column/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="29" lean-forward="true" selection-start-line="13" selection-start-column="29" selection-end-line="13" selection-end-column="29" />
+        <state relative-caret-position="105">
+          <caret line="7" selection-start-line="7" selection-end-line="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WD_PS_1 HTML, CSS/2Column/2column.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="57" selection-start-line="4" selection-start-column="57" selection-end-line="4" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WD_PS_1 HTML, CSS/3Column/3column.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WD_PS_1 HTML, CSS/Trening/Trening.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="141">
+          <caret line="19" column="12" selection-start-line="19" selection-start-column="12" selection-end-line="19" selection-end-column="12" />
           <folding>
             <element signature="n#style#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#1;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -196,17 +270,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/WD_PS_1 HTML, CSS/2Column/2column.html">
+    <entry file="file://$PROJECT_DIR$/WD_PS_1 HTML, CSS/Landing/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="57" selection-start-line="4" selection-start-column="57" selection-end-line="4" selection-end-column="57" />
+        <state relative-caret-position="15">
+          <caret line="1" column="4" selection-start-line="1" selection-start-column="4" selection-end-line="1" selection-end-column="4" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/WD_PS_1 HTML, CSS/2Column/style.css">
+    <entry file="file://$PROJECT_DIR$/WD_PS_1 HTML, CSS/Landing/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" selection-start-line="7" selection-end-line="7" />
+        <state relative-caret-position="270">
+          <caret line="18" column="47" selection-start-line="18" selection-start-column="47" selection-end-line="18" selection-end-column="47" />
         </state>
       </provider>
     </entry>
