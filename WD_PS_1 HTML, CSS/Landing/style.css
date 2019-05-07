@@ -110,18 +110,20 @@
 
 .contact_input {
     display: flex;
-    height: auto;
     background-color: #1abc9c;
     flex-direction: column;
     align-items: center;
     color: white;
     padding: 3%;
-    min-width: 300px;
+
+
 }
 
 .contact-input__input {
-    width: 300px;
-    margin-bottom: 5px;
+    width: 400px;
+    margin: 0 0 5px 0;
+    padding: 0;
+
 }
 
 .radio{
