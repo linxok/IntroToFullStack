@@ -1,5 +1,5 @@
 * {
-    font-family: Helvetica ;
+    font-family:Helvetica, sans-serif;
     margin: 0 0 0 0 ;
 }
 
@@ -108,20 +108,31 @@
     padding-top: 1rem;
 }
 
-.contact {
+.contact_input {
     display: flex;
-    height: 300px;
+    height: auto;
     background-color: #1abc9c;
     flex-direction: column;
     align-items: center;
     color: white;
     padding: 3%;
     min-width: 300px;
-
 }
 
-.text-input {
+.contact-input__input {
     width: 300px;
     margin-bottom: 5px;
 }
- 
+
+.radio{
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    width: max-content;
+    border: 1px solid  white;
+    padding: 5px;
+    margin-bottom: 5px;
+}
+.radio__check{
+    margin-left: 10px;
+}

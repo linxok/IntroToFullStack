@@ -32,7 +32,7 @@
             consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
             cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
             proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        <button  class="button" id="button-buy" type="button">Buy now!</button>
+        <button class="button" id="button-buy" type="button">Buy now!</button>
     </div>
 </section>
 <section class="about">
@@ -70,14 +70,48 @@
     <div class="form"></div>
 </section>
 <section class="contact">
-    <h2>Contact us!</h2>
-    <form action="" class="input"></form>
-    <input class="text-input" type="text" placeholder="Type here your name, please">
-    <input class="text-input" type="text" placeholder="Type here your mail, please">
-    <input class="text-input" type="text" placeholder="Enter your phone number, please">
-    <textarea class="text-input" placeholder="Ask your question"></textarea>
-    <button class="button" id="sendemail">Send email!</button>
+    <form action="" class="contact_input">
+        <h2>Contact us!</h2>
+        <input class="contact-input__input" type="text" placeholder="Type here your name, please">
+        <input class="contact-input__input" type="text" placeholder="Type here your mail, please">
+        <input class="contact-input__input" type="text" placeholder="Enter your phone number, please">
+        <textarea class="contact-input__input" placeholder="Ask your question"></textarea>
+        <button class="button" id="sendemail">Send email!</button>
+    </form>
 </section>
+<section class="contact">
+    <form class="contact_input" action="#">
+        <label class="contact-input__label" for="check-other">choose if not chicken.</label>
+        <input id="check-other" class="contact-input__input" type="checkbox" placeholder="check-other" about="no more">
+        <label class="contact-input__label" for="check-color">Choose you color</label>
+        <input id="check-color" type="color" class="contact-input__input">
+        <label class="contact-input__label" for="date-input">enter you birthday</label>
+        <input type="date" class="contact-input__input" id="date-input">
+        <label class="contact-input__label" for="date-local-input">date local</label>
+        <input type="datetime-local" class="contact-input__input" id="date-local-input">
+        <input type="email" class="contact-input__input" placeholder="please type you email" id="email">
+        <input type="file" class="contact-input__input">
+        <input type="image" class="contact-input__input" alt="image">
+        <input type="month" class="contact-input__input">
+        <input type="number" class="contact-input__input" value="50" min="0" max="100">
+        <div class="radio">
+            <input type="radio" class="radio__check" name="gender" value="male" id="radio1" checked >
+            <label for="radio1" >Male</label>
+            <input type="radio" class="radio__check" name="gender" value="female" id="radio2" >
+            <label for="radio2" >Female</label>
+            <input type="radio" class="radio__check" name="gender" value="other" id="radio3" >
+            <label for="radio3" >Other</label>
+        </div>
+        <input type="password" class="contact-input__input" placeholder="enter you password">
+        <input type="range" value="50" min="0" max="100" class="contact-input__input">
+        <input type="reset">
+        <input type="search" placeholder="search"  class="contact-input__input">
+        <input type="tel" class="contact-input__input" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="123-4567-8901" required>
+        <input type="time" class="contact-input__input">
+        <input type="week" class="contact-input__input">
+        <input type="url" class="contact-input__input">
 
+    </form>
+</section>
 </body>
 </html>
