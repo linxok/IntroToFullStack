@@ -2,10 +2,9 @@ body {
     margin: 40px;
 }
 
-.sidebar {
+.sidebar_left {
     grid-area: sidebar;
 }
-
 
 .content {
     grid-area: content;
@@ -23,9 +22,7 @@ body {
     min-height: 100vh;
     display: grid;
     grid-gap: 1em;
-
     grid-template-areas: "header  header  " "sidebar content " "footer  footer  ";
-
 }
 
 .box {
@@ -33,6 +30,6 @@ body {
     color: #000;
     border-radius: 5px;
     padding: 10px;
-    font-size: 100%;
+    font-size: 1em;
 }
  	

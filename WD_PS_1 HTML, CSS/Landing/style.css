@@ -1,6 +1,6 @@
 * {
     font-family:Helvetica, sans-serif;
-    margin: 0 0 0 0 ;
+    margin: 0 ;
 }
 
 .header {
@@ -25,12 +25,13 @@
     align-items: center;
 }
 
-.menu a {
+.menu__menu_link {
     align-content: flex-end;
-    font-size: 12px;
+    font-size: 1rem;
     margin-left: 5%;
     margin-right: 5%;
     text-decoration: none;
+    color: black;
 }
 
 .products {
@@ -55,6 +56,9 @@
     text-align: justify;
     color: white;
 }
+.products__headline{
+    padding-bottom: 10px;
+}
 
 .button {
     font-weight: bold;
@@ -68,7 +72,7 @@
 .button:hover {background-color: #1abc9c;}
 
 .button:active {
-    background-color: #1abc9c;;
+    background-color: #1abc9c;
     /*box-shadow: 0 5px #666;*/
     transform: translateY(4px);
 }
@@ -88,13 +92,10 @@
     align-items: center;
 }
 
-.about__wrapper i h3 p {
-    display: flex;
-}
-
 .content {
     text-align: center;
-    font-size: 12px;
+    font-size: 1rem;
+    margin-top: 10px;
 }
 
 .fas, .fab {
@@ -106,6 +107,7 @@
     font-size: 3rem;
     text-align: center;
     padding-top: 1rem;
+    margin-bottom: 10px;
 }
 
 .contact_input {
@@ -119,7 +121,7 @@
 
 }
 
-.contact-input__input {
+.contact_input__input {
     width: 400px;
     margin: 0 0 5px 0;
     padding: 0;

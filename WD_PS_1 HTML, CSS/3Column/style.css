@@ -2,12 +2,12 @@ body {
     margin: 10px;
 }
 
-.sidebar {
-    grid-area: sidebar;
+.sidebar_left {
+    grid-area: sidebar_left;
 }
 
-.sidebar2 {
-    grid-area: sidebar2;
+.sidebar_right {
+    grid-area: sidebar_right;
 }
 
 .content {
@@ -28,7 +28,7 @@ body {
     display: grid;
     grid-gap: 1em;
     grid-template-columns: 33% auto 15%;
-    grid-template-areas: "header  header  header" "sidebar content sidebar2" "footer  footer  footer";
+    grid-template-areas: "header  header  header" "sidebar_left content sidebar_right" "footer  footer  footer";
     grid-template-rows: auto 5fr auto;
 }
 
