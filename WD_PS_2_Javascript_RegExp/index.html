@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>WD_PS2 Javascript + RegExp</title>
+    <link rel="stylesheet" href="./main.css">
+
+</head>
+<body>
+<section class="wrapper">
+    <h1 class="head_main">Разминка</h1>
+    <form class="form">
+        <h3 class="form_head">1. Дана форма с двумя числовыми инпутами.
+            Посчитать сумму чисел в промежутке между введеными пользователем (например от -100 до 100),
+            суммируя только числа которые заканчиваются на 2,3, и 7</h3>
+        <div class="form_wrapper">
+            <input class="form_input" type="number" min="-100" max="100" id="elem1" value="-100">
+            <input class="form_input" type="number" min="-100" max="100" id="elem2" value="100">
+            <button class="btn" type="button" id="btn1">Calculate</button>
+            <label class="label" id="result1">result</label>
+        </div>
+    </form>
+    <form class="form">
+        <h3 class="form_head">2. Пользователь вводит время в секундах. Вывести в формате: hh:mm:ss (01:05:20).
+            Ниже наоборот: пользователь вводит время в формате hh:mm:ss, вывести количество секунд.</h3>
+        <div class="form_wrapper">
+            <div>
+                <input class="form_input" type="number" id="iput_sekonds">
+                <button class="btn" type="button" id="calculateTime">Calculate</button>
+                <label class="label" id="timeResult1">result</label>
+            </div>
+            <div>
+                <input class="form_input" type="date" id="iput_date">
+                <button class="btn" type="button" id="calculateDate">Calculate</button>
+                <label class="label" id="timeResult2">result</label>
+
+            </div>
+         </div>
+    </form>
+</section>
+<script src="./main.js"></script>
+</body>
+</html>

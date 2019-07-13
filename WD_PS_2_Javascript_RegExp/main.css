@@ -1,0 +1,32 @@
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    justify-content: center;
+    color: blue;
+}
+
+.head_main {
+    text-align: center;
+    color: black;
+}
+.form_wrapper {
+    border: black solid 3px;
+    padding: 30px;
+}
+.label {
+    display: inline-block;
+    width: auto;
+    margin-left: 10px;
+    margin-top: 10px;
+    font-size: 2rem;
+    color: red;
+}
+.form {
+    padding-bottom: 30px;
+    border-bottom: green dashed 3px;
+}
+.form_input {
+    border: black solid 1px;
+    margin: 8px;
+}
