@@ -26,17 +26,27 @@
             Ниже наоборот: пользователь вводит время в формате hh:mm:ss, вывести количество секунд.</h3>
         <div class="form_wrapper">
             <div>
-                <input class="form_input" type="number" id="iput_sekonds">
+                <input class="form_input" type="number" min="0" max="999999" value="0" id="input_seconds">
                 <button class="btn" type="button" id="calculateTime">Calculate</button>
                 <label class="label" id="timeResult1">result</label>
             </div>
             <div>
-                <input class="form_input" type="date" id="iput_date">
-                <button class="btn" type="button" id="calculateDate">Calculate</button>
+                <input class="form_input" type="text" id="input_time" value="00:00:00">
+                <button class="btn" type="button" id="calculateSeconds">Calculate</button>
                 <label class="label" id="timeResult2">result</label>
-
             </div>
          </div>
+    </form>
+    <form class="form">
+        <h3 class="form_head">3) Даны два input[type=datetime-local]. Вычислить промежуток времени
+            прошедший между датами и вывести пользователю сообщение типа:
+            2 year(s), 1 month(s), 3 day(s), 5 hour(s), 10 minute(s), 15 second(s).</h3>
+        <div class="form_wrapper">
+            <input class="form_input" type="datetime-local" id="first_date" value="2018-06-13T01:01">
+            <input class="form_input" type="datetime-local" id="second_date" value="2019-07-14T02:02">
+            <button class="btn" type="button" id="btn_date_interval">Calculate</button>
+            <label class="label" id="date_interval">result</label>
+        </div>
     </form>
 </section>
 <script src="./main.js"></script>

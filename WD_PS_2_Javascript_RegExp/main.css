@@ -1,9 +1,11 @@
 .wrapper {
     display: flex;
     flex-direction: column;
-    width: 90%;
-    justify-content: center;
+    width: auto;
+    align-content: center;
     color: blue;
+    margin: 0 10%;
+    min-width: 480px;
 }
 
 .head_main {
@@ -29,4 +31,10 @@
 .form_input {
     border: black solid 1px;
     margin: 8px;
+}
+
+@media only screen and (max-width: 550px) {
+    .wrapper {
+        margin: 0 0;
+    }
 }
