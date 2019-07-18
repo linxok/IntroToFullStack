@@ -38,3 +38,11 @@
         margin: 0 0;
     }
 }
+
+canvas {
+    display: block;
+    border: black solid 1px;
+    height: 150px;
+    width: 300px;
+    margin:  8px;
+}

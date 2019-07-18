@@ -100,5 +100,44 @@ btn_date_interval.addEventListener('click', () => {
 });
 
 
+const btn_chess = document.getElementById('btn_chess');
+btn_chess.addEventListener('click', () => {
 
+    function draw(row, col) {
+        const h =5;
+        const canvas = document.getElementById('canvas_chess');
+        if (canvas.getContext) {
+            const ctx = canvas.getContext('2d');
+
+            ctx.clearRect(0,0, canvas.width, canvas.height);
+
+            for (let i = 0; i < col; i++){
+                for (let j = 0; j < row; j++){
+                    if ((j+i)%2 === 0 ){
+                        ctx.fillRect(i*h,j*h,h,h);
+                    } else {
+                        ctx.strokeRect(i*h,j*h,h,h);
+                    }
+
+                }
+            }
+
+            // ctx.fillRect(25,25,100,100);
+            // ctx.clearRect(45,45,60,60);
+            // ctx.strokeRect(50,50,50,50);
+
+        } else { alert("Wrong canvas")};
+    }
+
+    const input_size = document.getElementById('input_size').value;
+    const size = input_size.split('x');
+    if ((Number(size[0])) && (Number(size[1]) )){
+        const row = size[0];
+        const col = size[1];
+
+        draw(row , col);
+
+    } else { alert("Wrong value")};
+
+});
 
