@@ -57,6 +57,16 @@
             <canvas id="canvas_chess"></canvas>
         </div>
     </form>
+    <form class="form">
+        <h3 class="form_head">5. Дан некий textarea, в который пользователь вводит ссылки или ip через запятую.
+            Когда textarea станет неактивным - проверить введены ли ссылки/ip, удалить дичь (то что не ссылки и не ip),
+            и вывести их отсортированным по алфавиту списком ссылок (Пользователю http:// и https:// не показывать, при
+            клике на ссылку открывается новое окно).</h3>
+        <textarea class="form_input" id="input_textarea" rows="5" cols="88" onfocusout="">https://www.google.com, https://www.ukr.net,мама мыла раму, 127.0.0.1, 192.168.0.1</textarea>
+        <div>
+        <ul class="label" id="link_out"></ul>
+        </div>
+    </form>
 </section>
 <script src="./main.js"></script>
 </body>

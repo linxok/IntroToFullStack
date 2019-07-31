@@ -103,41 +103,84 @@ btn_date_interval.addEventListener('click', () => {
 const btn_chess = document.getElementById('btn_chess');
 btn_chess.addEventListener('click', () => {
 
-    function draw(row, col) {
-        const h =5;
+    function draw(col, row) {
+        let h = null;
         const canvas = document.getElementById('canvas_chess');
         if (canvas.getContext) {
             const ctx = canvas.getContext('2d');
 
-            ctx.clearRect(0,0, canvas.width, canvas.height);
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-            for (let i = 0; i < col; i++){
-                for (let j = 0; j < row; j++){
-                    if ((j+i)%2 === 0 ){
-                        ctx.fillRect(i*h,j*h,h,h);
+            h = canvas.height / Math.max(col, row);
+
+            for (let i = 0; i < col; i++) {
+                for (let j = 0; j < row; j++) {
+                    if ((j + i) % 2 === 0) {
+                        ctx.fillRect(i * h, j * h, h, h);
                     } else {
-                        ctx.strokeRect(i*h,j*h,h,h);
+                        ctx.strokeRect(i * h, j * h, h, h);
                     }
-
                 }
             }
 
-            // ctx.fillRect(25,25,100,100);
-            // ctx.clearRect(45,45,60,60);
-            // ctx.strokeRect(50,50,50,50);
-
-        } else { alert("Wrong canvas")};
+        } else {
+            alert("Wrong canvas")
+        }
     }
 
     const input_size = document.getElementById('input_size').value;
     const size = input_size.split('x');
-    if ((Number(size[0])) && (Number(size[1]) )){
-        const row = size[0];
-        const col = size[1];
+    if ((Number(size[0])) && (Number(size[1]))) {
+        const col = size[0];
+        const row = size[1];
 
-        draw(row , col);
+        draw(col, row);
 
-    } else { alert("Wrong value")};
+    } else {
+        alert("Wrong value")
+    }
+
+});
+
+const input_textarea = document.getElementById('input_textarea');
+input_textarea.addEventListener('blur', () => {
+    const link_out = document.getElementById('link_out');
+    if (link_out.childNodes.length) {
+        link_out.removeChild(link_out.firstChild);
+    }
+
+    let array = input_textarea.value.split(',');
+    array = array.map(item => item.replace(/\s/g, ''));
+    // console.log(array);
+
+    const regexpIp = /(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$/g;
+    const regexpLink = /((http|https|ftp|ftps)\:\/\/)|(www\.)[a-zA-Z0-9\-\.]+\.[a-zA-Z]{2,3}(\/\S*)?/gi;
+
+      // "(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)";
+      // "(https?:\\/\\/)?([\\da-z\\.-]+)\\.([a-z\\.]{2,6})([\\/\\w \\.-]*)*\\/?";
+      // "([\\da-z\\.-]+)\\.([a-z\\.]{2,6})([\\/\\w \\.-]*)*\\/?";
+
+    let arrayIp =  array.filter(value => value.match(regexpIp));
+
+    let arrayLink =  array.filter(value => value.match(regexpLink));
+    arrayLink = arrayLink.map(item => item.replace(/http\:\/\/|https\:\/\//gi, ''));
+
+    let outputArr = [...arrayIp, ...arrayLink].sort();
+    // console.log(outputArr);
+
+    let output_li = document.getElementById("link_out");
+    output_li.innerText  = "";
+
+    for(let i = 0 ;i < outputArr.length; i++) {
+        let new_li = document.createElement("li");
+        let new_link = document.createElement("a");
+        new_link.href = "http://" + outputArr[i];
+        new_link.className = "label";
+        new_link.innerText = outputArr[i];
+        new_link.target = "_blank";
+        new_li.appendChild(new_link);
+        output_li.appendChild(new_li);
+    }
 
 });
 
