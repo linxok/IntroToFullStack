@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>WD_PS2 Javascript + RegExp</title>
-    <link rel="stylesheet" href="./main.css">
+    <link rel="stylesheet" href="main.css">
 
 </head>
 <body>
@@ -62,12 +62,21 @@
             Когда textarea станет неактивным - проверить введены ли ссылки/ip, удалить дичь (то что не ссылки и не ip),
             и вывести их отсортированным по алфавиту списком ссылок (Пользователю http:// и https:// не показывать, при
             клике на ссылку открывается новое окно).</h3>
-        <textarea class="form_input" id="input_textarea" rows="5" cols="88" onfocusout="">https://www.google.com, https://www.ukr.net,мама мыла раму, 127.0.0.1, 192.168.0.1</textarea>
+        <textarea class="form_input" id="input_textarea" rows="5" cols="88">https://www.google.com, https://www.ukr.net,мама мыла раму, 127.0.0.1, 192.168.0.1</textarea>
         <div>
         <ul class="label" id="link_out"></ul>
         </div>
     </form>
+    <form class="form">
+        <h3 class="form_head">6. В textarea вводим текст, в input - регулярку или текст. После нажатии кнопки -
+            вывести тот же текст, но в нем все, что подходит под регулярку выделено желтым (подсвечено).
+            (Вот и пригодился тег mark)</h3>
+        <textarea class="form_input" id="input_tex" rows="5" cols="88">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A aperiam autem dicta, dolor dolore doloribus fuga incidunt ipsam magnam maxime molestias praesentium repellat saepe tempora totam velit voluptatem. In, numquam?</textarea>
+        <input class="form_input" type="text" id="regexp" value="[A-Z]|[a,e,i,o]">
+        <button class="btn" type="button" id="btn_regexp" onclick="myRegExp()">GO</button>
+        <label class="label" id="link_regexp"></label>
+     </form>
 </section>
-<script src="./main.js"></script>
+<script src="main.js"></script>
 </body>
 </html>

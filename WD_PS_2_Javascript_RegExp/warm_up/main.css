@@ -22,7 +22,7 @@
     margin-left: 10px;
     margin-top: 10px;
     font-size: 2rem;
-    color: red;
+    color: black;
 }
 .form {
     padding-bottom: 30px;
@@ -45,4 +45,8 @@ canvas {
     height: 150px;
     width: 300px;
     margin:  8px;
+}
+
+mark {
+    background-color: yellow;
 }
