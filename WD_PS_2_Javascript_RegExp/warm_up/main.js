@@ -188,7 +188,7 @@ function myRegExp() {
     let text = document.getElementById("input_tex").value;
     const regexp = document.getElementById("regexp").value;
     console.log(new RegExp(regexp,'gi'));
-    text = text.replace(new RegExp(regexp,'g'), '<mark>' + '$&' + '</mark>');
+    text = text.replace(new RegExp(regexp,'g'), "<mark>$&</mark>");
     document.getElementById("link_regexp").innerHTML = text;
 
 }
