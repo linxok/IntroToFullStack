@@ -29,7 +29,7 @@
     border-bottom: green dashed 3px;
 }
 .form_input {
-    display: flex;
+    display: block;
     width: auto;
     border: black solid 1px;
     margin: 8px;
@@ -45,6 +45,7 @@
 .btn:active {
     transform: translateX(3px);
     transform: translateY(3px);
+    background-color: red;
 }
 @media only screen and (max-width: 550px) {
     .wrapper {
