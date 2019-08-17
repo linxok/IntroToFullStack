@@ -29,10 +29,23 @@
     border-bottom: green dashed 3px;
 }
 .form_input {
+    display: flex;
+    width: auto;
     border: black solid 1px;
     margin: 8px;
 }
 
+.btn {
+    height: 30px;
+    width: 90px;
+}
+.btn:hover {
+    background-color: grey;
+}
+.btn:active {
+    transform: translateX(3px);
+    transform: translateY(3px);
+}
 @media only screen and (max-width: 550px) {
     .wrapper {
         margin: 0 0;
