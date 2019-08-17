@@ -20,13 +20,13 @@
                 <div class="field-body">
                     <div class="field">
                         <p class="control">
-                            <input class="input" type="text" placeholder="Search by name">
+                            <input class="input" type="text" id="search" placeholder="Search by name">
                         </p>
                     </div>
                     <div class="field">
                         <p class="control">
                         <div class="select" style="width: 100%">
-                            <select placeholder="Filter by category" style="width: 100%">
+                            <select placeholder="Filter by category" id="select_category" style="width: 100%">
                                 <option value="" selected>Filter by category</option>
                                 <option value="supplies">Office supplies</option>
                                 <option value="furniture">Furniture</option>
@@ -42,38 +42,23 @@
             <table class="table is-striped is-fullwidth">
                 <thead>
                 <tr>
-                    <th style="cursor: pointer">Category ▼</th>
-                    <th style="cursor: pointer">Name ▼</th>
+                    <th id="category"  >Category ▼</th>
+                    <th id="name"  >Name ▼</th>
                     <th>Amount</th>
                     <th>Price</th>
                 </tr>
                 </thead>
-                <tbody>
-                <tr>
-                    <td>Office supplies</td>
-                    <td>Pen</td>
-                    <td>10</td>
-                    <td>2$</td>
-                </tr>
-                <tr>
-                    <td>Furniture</td>
-                    <td>Chair</td>
-                    <td>1</td>
-                    <td>20$</td>
-                </tr>
-                <tr>
-                    <td>Other</td>
-                    <td>Trash bin</td>
-                    <td>1</td>
-                    <td>5$</td>
-                </tr>
+                <tbody id="priseList">
+                <!--this table, make js -->
                 </tbody>
                 <tfoot>
                 <tr>
                     <th></th>
                     <th></th>
                     <th>Total:</th>
-                    <th>45$</th>
+                    <th id="totalPrise">
+                        <!--this total calculate js-->
+                    </th>
                 </tr>
                 </tfoot>
             </table>
