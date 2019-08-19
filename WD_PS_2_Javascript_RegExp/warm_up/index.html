@@ -18,7 +18,7 @@
             <input class="form_input" type="number" min="-100" max="100" id="elem1" value="-100">
             <input class="form_input" type="number" min="-100" max="100" id="elem2" value="100">
             <button class="btn" type="button" id="btn1">Calculate</button>
-            <label class="label" id="result1">result</label>
+            <output class="label" id="result1">result</output>
         </div>
     </form>
     <form class="form">
@@ -28,12 +28,12 @@
             <div>
                 <input class="form_input" type="number" min="0" max="999999" value="0" id="input_seconds">
                 <button class="btn" type="button" id="calculateTime">Calculate</button>
-                <label class="label" id="timeResult1">result</label>
+                <output class="label" id="timeResult1">result</output>
             </div>
             <div>
                 <input class="form_input" type="text" id="input_time" value="00:00:00">
                 <button class="btn" type="button" id="calculateSeconds">Calculate</button>
-                <label class="label" id="timeResult2">result</label>
+                <output class="label" id="timeResult2">result</output>
             </div>
         </div>
     </form>
@@ -45,7 +45,7 @@
             <input class="form_input" type="datetime-local" id="first_date" value="2018-06-13T01:01">
             <input class="form_input" type="datetime-local" id="second_date" value="2019-07-14T02:02">
             <button class="btn" type="button" id="btn_date_interval">Calculate</button>
-            <label class="label" id="date_interval">result</label>
+            <output class="label" id="date_interval">result</output>
         </div>
     </form>
     <form class="form">
@@ -77,7 +77,7 @@
             <label class="label">Input regular exp.</label>
             <input class="form_input" type="text" id="regexp" value="[A-Z]|[a,e,i,o]">
             <button class="btn" type="button" id="btn_regexp" onclick="myRegExp()">GO</button>
-            <label class="label" id="link_regexp"></label>
+            <output class="label" id="link_regexp"></output>
         </div>
     </form>
 </section>

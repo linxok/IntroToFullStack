@@ -1,8 +1,4 @@
-const btn1 = document.getElementById('btn1');
-
-
-//  task 1
-btn1.addEventListener('click', () => {
+document.getElementById('btn1').addEventListener('click', () => {
     const val1 = parseFloat(document.getElementById('elem1').value);
     const val2 = parseFloat(document.getElementById('elem2').value);
 
@@ -10,20 +6,16 @@ btn1.addEventListener('click', () => {
         [val1, val2] = [val2, val1];
     }
 
-    let summa = 0;
+    let sum = 0;
     for (let i = val1; i <= val2; i++) {
         if (Math.abs(i) % 10 === 2 || Math.abs(i) % 10 === 3 || Math.abs(i) % 10 === 7) {
-            summa += i;
+            sum += i;
         }
     }
-    document.getElementById('result1').textContent = summa;
+    document.getElementById('result1').textContent = sum;
 });
 
-
-// task 2.1
-
-const calculateTime = document.getElementById('calculateTime');
-calculateTime.addEventListener('click', () => {
+document.getElementById('calculateTime').addEventListener('click', () => {
     const seconds = parseFloat(document.getElementById('input_seconds').value);
     let date = new Date(null);
     date.setSeconds(seconds);
@@ -50,9 +42,7 @@ calculateTime.addEventListener('click', () => {
 });
 
 
-// task 2.2
-const calculateSeconds = document.getElementById('calculateSeconds');
-calculateSeconds.addEventListener('click', () => {
+document.getElementById('calculateSeconds').addEventListener('click', () => {
 
     let input = document.getElementById('input_time');
     input = input.value;
@@ -64,19 +54,16 @@ calculateSeconds.addEventListener('click', () => {
 
     let out = h * 60 * 60 + m * 60 + s;
 
-    console.log(out);
     document.getElementById('timeResult2').innerText = `${out} s.`;
 });
 
 /** does not take into account the calendar number of days in the month */
 
-const btn_date_interval = document.getElementById('btn_date_interval');
-btn_date_interval.addEventListener('click', () => {
+document.getElementById('btn_date_interval').addEventListener('click', () => {
     const date1 = new Date(document.getElementById('first_date').value);
     const date2 = new Date(document.getElementById('second_date').value);
     let dateRez = new Date(date2 - date1);
 
-    console.log(dateRez.getMonth());
     const out = `${dateRez.getFullYear() - 1970}year(s), ${dateRez.getMonth()}month(s), ${dateRez.getDay()}day(s), 
         ${dateRez.getUTCHours()}hour(s), ${dateRez.getMinutes()}minute(s), ${dateRez.getSeconds()}second(s)`;
 
@@ -100,8 +87,7 @@ btn_date_interval.addEventListener('click', () => {
 });
 
 
-const btn_chess = document.getElementById('btn_chess');
-btn_chess.addEventListener('click', () => {
+document.getElementById('btn_chess').addEventListener('click', () => {
 
     function draw(col, row) {
         let h = null;
@@ -142,8 +128,7 @@ btn_chess.addEventListener('click', () => {
 
 });
 
-const input_textarea = document.getElementById('input_textarea');
-input_textarea.addEventListener('blur', () => {
+document.getElementById('input_textarea').addEventListener('blur', () => {
     const link_out = document.getElementById('link_out');
     if (link_out.childNodes.length) {
         link_out.removeChild(link_out.firstChild);
@@ -151,27 +136,26 @@ input_textarea.addEventListener('blur', () => {
 
     let array = input_textarea.value.split(',');
     array = array.map(item => item.replace(/\s/g, ''));
-    // console.log(array);
 
     const regexpIp = /(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$/g;
     const regexpLink = /((http|https|ftp|ftps)\:\/\/)|(www\.)[a-zA-Z0-9\-\.]+\.[a-zA-Z]{2,3}(\/\S*)?/gi;
 
-      // "(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)";
-      // "(https?:\\/\\/)?([\\da-z\\.-]+)\\.([a-z\\.]{2,6})([\\/\\w \\.-]*)*\\/?";
-      // "([\\da-z\\.-]+)\\.([a-z\\.]{2,6})([\\/\\w \\.-]*)*\\/?";
+    // other regexp
+    // "(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)";
+    // "(https?:\\/\\/)?([\\da-z\\.-]+)\\.([a-z\\.]{2,6})([\\/\\w \\.-]*)*\\/?";
+    // "([\\da-z\\.-]+)\\.([a-z\\.]{2,6})([\\/\\w \\.-]*)*\\/?";
 
-    let arrayIp =  array.filter(value => value.match(regexpIp));
+    let arrayIp = array.filter(value => value.match(regexpIp));
 
-    let arrayLink =  array.filter(value => value.match(regexpLink));
+    let arrayLink = array.filter(value => value.match(regexpLink));
     arrayLink = arrayLink.map(item => item.replace(/http\:\/\/|https\:\/\//gi, ''));
 
     let outputArr = [...arrayIp, ...arrayLink].sort();
-    // console.log(outputArr);
 
     let output_li = document.getElementById("link_out");
-    output_li.innerText  = "";
+    output_li.innerText = "";
 
-    for(let i = 0 ;i < outputArr.length; i++) {
+    for (let i = 0; i < outputArr.length; i++) {
         let new_li = document.createElement("li");
         let new_link = document.createElement("a");
         new_link.href = "http://" + outputArr[i];
@@ -187,8 +171,8 @@ input_textarea.addEventListener('blur', () => {
 function myRegExp() {
     let text = document.getElementById("input_tex").value;
     const regexp = document.getElementById("regexp").value;
-    console.log(new RegExp(regexp,'gi'));
-    text = text.replace(new RegExp(regexp,'g'), "<mark>$&</mark>");
+    // console.log(new RegExp(regexp,'gi'));
+    text = text.replace(new RegExp(regexp, 'g'), "<mark>$&</mark>");
     document.getElementById("link_regexp").innerHTML = text;
 
 }
