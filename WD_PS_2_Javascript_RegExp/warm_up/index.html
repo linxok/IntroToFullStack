@@ -49,12 +49,25 @@
         </div>
     </form>
     <form class="form">
-        <h3 class="form_head"> 4. Пользователь вводит габариты шахматной доски (в формате ‘8x8’).
+        <h3 class="form_head"> 4.1 Пользователь вводит габариты шахматной доски (в формате ‘8x8’).
             Вывести (как бы нарисовать) шахматную доску.</h3>
         <div class="form_wrapper">
             <input class="form_input" type="text" id="input_size" value="8x8">
             <button class="btn" type="button" id="btn_chess">Paint Board</button>
             <canvas id="canvas_chess"></canvas>
+        </div>
+    </form>
+    <form class="form">
+        <h3 class="form_head"> 4.2 Пользователь вводит габариты шахматной доски (в формате ‘8x8’).
+            Вывести (как бы нарисовать) шахматную доску.</h3>
+        <div class="form_wrapper">
+            <input class="form_input" type="text" id="input_size2" value="8x8">
+            <button class="btn" type="button" id="btn_chess2">Paint Board</button>
+            <div id="board_chess">
+                <div class="cell cell_white" padding="12px"></div>
+                <div class="cell cell_black"></div>
+
+            </div>
         </div>
     </form>
     <form class="form">

@@ -36,23 +36,24 @@ const GOODS = [
         price: 3
     }
 ];
-
+let tempData = GOODS;
 outputData(GOODS);
 let vectorSort = true;
 
 document.getElementById('category').addEventListener('click' ,() => {
-    outputData(sortedType(GOODS, "category" ))
+    outputData(sortedType(tempData, "category" ))
 });
 document.getElementById('name').addEventListener('click' ,() => {
-    outputData(sortedType(GOODS, "name" ))
+    outputData(sortedType(tempData, "name" ))
 });
 
 document.getElementById('select_category').addEventListener('change', (event) => {
-   outputData(GOODS.filter(entry => entry.category === event.target.value));
+   outputData(tempData.filter(entry => entry.category === event.target.value));
 });
 
 document.getElementById('search').addEventListener('input', (event) => {
-   outputData(GOODS.filter(entry => entry.name.match(event.target.value)));
+    tempData = GOODS.filter(entry => entry.name.match(event.target.value));
+    outputData(tempData);
 });
 
 function outputData(data) {

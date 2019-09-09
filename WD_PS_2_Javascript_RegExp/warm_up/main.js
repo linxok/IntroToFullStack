@@ -1,3 +1,8 @@
+/*
+1. Дана форма с двумя числовыми инпутами.
+    Посчитать сумму чисел в промежутке между введеными пользователем (например от -100 до 100),
+суммируя только числа которые заканчиваются на 2,3, и 7*/
+
 document.getElementById('btn1').addEventListener('click', () => {
     const val1 = parseFloat(document.getElementById('elem1').value);
     const val2 = parseFloat(document.getElementById('elem2').value);
@@ -12,9 +17,14 @@ document.getElementById('btn1').addEventListener('click', () => {
             sum += i;
         }
     }
-    document.getElementById('result1').textContent = sum;
+    document.getElementById('result1').innerHTML = sum.toString();
 });
+/*
+2. Пользователь вводит время в секундах. Вывести в формате: hh:mm:ss (01:05:20).
+Ниже наоборот: пользователь вводит время в формате hh:mm:ss, вывести количество секунд.
+    */
 
+/*2.1*/
 document.getElementById('calculateTime').addEventListener('click', () => {
     const seconds = parseFloat(document.getElementById('input_seconds').value);
     let date = new Date(null);
@@ -41,7 +51,7 @@ document.getElementById('calculateTime').addEventListener('click', () => {
     document.getElementById('timeResult1').innerText = convertTime(seconds);
 });
 
-
+/*2.2*/
 document.getElementById('calculateSeconds').addEventListener('click', () => {
 
     let input = document.getElementById('input_time');
@@ -57,36 +67,29 @@ document.getElementById('calculateSeconds').addEventListener('click', () => {
     document.getElementById('timeResult2').innerText = `${out} s.`;
 });
 
+/*
+3) Даны два input[type=datetime-local]. Вычислить промежуток времени
+прошедший между датами и вывести пользователю сообщение типа:
+    2 year(s), 1 month(s), 3 day(s), 5 hour(s), 10 minute(s), 15 second(s).*/
 /** does not take into account the calendar number of days in the month */
+
 
 document.getElementById('btn_date_interval').addEventListener('click', () => {
     const date1 = new Date(document.getElementById('first_date').value);
     const date2 = new Date(document.getElementById('second_date').value);
-    let dateRez = new Date(date2 - date1);
 
-    const out = `${dateRez.getFullYear() - 1970}year(s), ${dateRez.getMonth()}month(s), ${dateRez.getDay()}day(s), 
-        ${dateRez.getUTCHours()}hour(s), ${dateRez.getMinutes()}minute(s), ${dateRez.getSeconds()}second(s)`;
+    const out = `${date2.getFullYear() - date1.getFullYear()}year(s), ${date2.getMonth() - date1.getMonth()}month(s),
+        ${date2.getDate() - date1.getDate()}day(s),${date2.getHours() - date1.getHours()}hour(s), ${date2.getMinutes() -
+        date1.getMinutes()}minute(s), ${date2.getSeconds() - date1.getSeconds()}second(s)`;
 
-    /** alternate idea
-     /*const min = 60;
-     const hour = min * 60;
-     const day = hour * 24;
-     const month = day * 31  ;
-     const year = day * 365;
-
-     let years = dateRez / year ^ 0;
-     let months = (dateRez - years * year) / month ^ 0;
-     let days = (dateRez - years * year - month * months) / day ^ 0;
-     let hours = (dateRez - years * year - month * months - days * day) / hour ^ 0;
-     let mins = (dateRez - years * year - month * months - days * day - hour * hours) / min ^ 0;
-     let seconds = (dateRez - years * year - month * months - days * day - hour * hours - min * mins);
-     console.log(out);*/
-
-    document.getElementById('date_interval').innerText = out;
+    document.getElementById('date_interval').innerHTML = out;
 
 });
 
 
+/*4.1 Пользователь вводит габариты шахматной доски (в формате ‘8x8’).
+Вывести (как бы нарисовать) шахматную доску.
+    */
 document.getElementById('btn_chess').addEventListener('click', () => {
 
     function draw(col, row) {
@@ -117,16 +120,66 @@ document.getElementById('btn_chess').addEventListener('click', () => {
     const input_size = document.getElementById('input_size').value;
     const size = input_size.split('x');
     if ((Number(size[0])) && (Number(size[1]))) {
-        const col = size[0];
-        const row = size[1];
+        const col = Number.parseInt(size[0]);
+        const row = Number.parseInt(size[1]);
 
         draw(col, row);
 
     } else {
-        alert("Wrong value")
+        alert("Wrong value");
     }
 
 });
+
+/*4.2 Пользователь вводит габариты шахматной доски (в формате ‘8x8’).
+Вывести (как бы нарисовать) шахматную доску.
+    */
+document.getElementById('btn_chess2').addEventListener('click', () => {
+
+    function draw(col, row) {
+        const board = document.getElementById('board_chess');
+
+        // const boardSize = board.clientWidth;
+        const cellSize = (99.9999 / col) / 2;
+        console.log(cellSize);
+        while (board.firstChild) {
+            board.firstChild.remove();
+        }
+
+        for (let i = 0; i < row; i++) {
+            for (let j = 0; j < col; j++) {
+                let divRow = document.createElement('div');
+                if ((j + i) % 2 === 0) {
+                    divRow.setAttribute('class', 'cell cell_white')
+                } else {
+                    divRow.setAttribute('class', 'cell cell_black')
+                }
+                divRow.style.padding = `${cellSize}%`;
+                board.appendChild(divRow);
+            }
+        }
+    }
+
+    const input_size = document.getElementById('input_size2').value;
+    const size = input_size.split('x');
+    if ((Number(size[0])) && (Number(size[1]))) {
+        const col = Number.parseInt(size[0]);
+        const row = Number.parseInt(size[1]);
+
+        draw(col, row);
+
+    } else {
+        alert("Wrong value");
+    }
+
+});
+
+/*
+5. Дан некий textarea, в который пользователь вводит ссылки или ip через запятую.
+    Когда textarea станет неактивным - проверить введены ли ссылки/ip, удалить дичь (то что не ссылки и не ip),
+и вывести их отсортированным по алфавиту списком ссылок (Пользователю http:// и https:// не показывать, при
+    клике на ссылку открывается новое окно).
+*/
 
 document.getElementById('input_textarea').addEventListener('blur', () => {
     const link_out = document.getElementById('link_out');
@@ -167,6 +220,12 @@ document.getElementById('input_textarea').addEventListener('blur', () => {
     }
 
 });
+
+/*
+6. В textarea вводим текст, в input - регулярку или текст. После нажатии кнопки -
+вывести тот же текст, но в нем все, что подходит под регулярку выделено желтым (подсвечено).
+(Вот и пригодился тег mark)
+*/
 
 function myRegExp() {
     let text = document.getElementById("input_tex").value;
