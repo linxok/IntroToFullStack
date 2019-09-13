@@ -48,7 +48,12 @@ document.getElementById('name').addEventListener('click' ,() => {
 });
 
 document.getElementById('select_category').addEventListener('change', (event) => {
-   outputData(tempData.filter(entry => entry.category === event.target.value));
+    if (event.target.value === '') {
+        tempData = GOODS;
+        outputData(tempData);
+    } else {
+        outputData(tempData.filter(entry => entry.category === event.target.value));
+    }
 });
 
 document.getElementById('search').addEventListener('input', (event) => {
