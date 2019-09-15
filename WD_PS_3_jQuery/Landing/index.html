@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>N++</title>
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+          integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+          crossorigin="anonymous">
+</head>
+
+<body>
+<section class="header">
+    <div class="logo">
+        <p>N<span class="logo__pp">++</span></p>
+    </div>
+    <menu class="menu" id="menu">
+        <a class="menu__menu_link" href="#products" title="PRODUCTS">PRODUCTS</a>
+        <a class="menu__menu_link" href="#about" title="ABOUT US">ABOUT US</a>
+        <a class="menu__menu_link" href="#contact" title="CONTACT US">CONTACT US</a>
+    </menu>
+</section>
+<section class="products" id="products">
+    <div class="products__image">
+        <img class="image" src="image/phone.png" alt="phone">
+    </div>
+    <div class="products__content">
+        <h2 class="products__headline">Our awesome app is ready to use!</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <button class="button" id="button-buy" type="button">Buy now!</button>
+    </div>
+</section>
+<section class="about" id="about">
+    <div class="about__wrapper">
+        <i class="fas fa-code"></i>
+        <h3>Web development</h3>
+        <p class="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    </div>
+    <div class="about__wrapper">
+        <i class="fab fa-android"></i>
+        <h3>Mobile development</h3>
+        <p class="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+    </div>
+    <div class="about__wrapper">
+        <i class="fas fa-cloud"></i>
+        <h3>Hightload</h3>
+        <p class="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    </div>
+</section>
+<section class="contact" id="contact">
+    <form action="" class="contact_input">
+        <h2>Contact us!</h2>
+        <input class="contact_input__input" type="text" placeholder="Type here your name, please">
+        <input class="contact_input__input" type="text" placeholder="Type here your mail, please">
+        <input class="contact_input__input" type="text" placeholder="Enter your phone number, please">
+        <textarea class="contact_input__input" placeholder="Ask your question"></textarea>
+        <button class="button" id="sendemail">Send email!</button>
+    </form>
+</section>
+<form class="contact_input" action="#">
+    <label class="contact_input__label" for="check-other">choose if not chicken.</label>
+    <input id="check-other" class="contact_input__input" type="checkbox" placeholder="check-other" about="no more">
+    <label class="contact_input__label" for="check-color">Choose you color</label>
+    <input id="check-color" type="color" class="contact_input__input">
+    <label class="contact-input__label" for="date-input">enter you birthday</label>
+    <input type="date" class="contact_input__input" id="date-input">
+    <label class="contact-input__label" for="date-local-input">date local</label>
+    <input type="datetime-local" class="contact_input__input" id="date-local-input">
+    <input type="email" class="contact_input__input" placeholder="please type you email" id="email">
+    <input type="month" class="contact_input__input">
+    <input type="number" class="contact_input__input" value="50" min="0" max="100">
+    <div class="radio">
+        <input type="radio" class="radio__check" name="gender" value="male" id="radio1" checked>
+        <label for="radio1">Male</label>
+        <input type="radio" class="radio__check" name="gender" value="female" id="radio2">
+        <label for="radio2">Female</label>
+        <input type="radio" class="radio__check" name="gender" value="other" id="radio3">
+        <label for="radio3">Other</label>
+    </div>
+    <input type="password" class="contact_input__input" placeholder="enter you password">
+    <input type="range" value="50" min="0" max="100" class="contact_input__input">
+    <input type="tel" class="contact_input__input" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="123-4567-8901"
+           required>
+    <input type="time" class="contact_input__input">
+    <input type="week" class="contact_input__input">
+    <input type="url" class="contact_input__input" placeholder="http://">
+    <input type="search" placeholder="search" class="contact_input__input">
+    <input type="image" class="contact_input__input" alt="image">
+    <input type="file" class="contact_input__input">
+    <input class="button" type="reset">
+</form>
+<div id="toTop">^pageUp</div>
+<script src="script/jquery-3.4.1.min.js" type="text/javascript"></script>
+<script src="script/main.js" type="text/javascript"></script>
+</body>
+</html>
