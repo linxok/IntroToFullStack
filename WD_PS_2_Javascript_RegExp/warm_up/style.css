@@ -1,94 +1,94 @@
 .wrapper {
-    display: flex;
-    flex-direction: column;
-    width: auto;
-    align-content: center;
-    color: blue;
-    margin: 0 10%;
-    min-width: 480px;
+  display: flex;
+  flex-direction: column;
+  width: auto;
+  align-content: center;
+  color: blue;
+  margin: 0 10%;
+  min-width: 480px;
 }
 
 .head_main {
-    text-align: center;
-    color: black;
+  text-align: center;
+  color: black;
 }
 
 .form_wrapper {
-    border: black solid 3px;
-    padding: 30px;
+  border: black solid 3px;
+  padding: 30px;
 }
 
 .label {
-    display: inline-block;
-    width: auto;
-    margin-left: 10px;
-    margin-top: 10px;
-    font-size: 2rem;
-    color: black;
+  display: inline-block;
+  width: auto;
+  margin-left: 10px;
+  margin-top: 10px;
+  font-size: 2rem;
+  color: black;
 }
 
 .form {
-    padding-bottom: 30px;
-    border-bottom: green dashed 3px;
+  padding-bottom: 30px;
+  border-bottom: green dashed 3px;
 }
 
 .form_input {
-    display: block;
-    width: auto;
-    border: black solid 1px;
-    margin: 8px;
+  display: block;
+  width: auto;
+  border: black solid 1px;
+  margin: 8px;
 }
 
 .btn {
-    height: 30px;
-    width: 90px;
+  height: 30px;
+  width: 90px;
 }
 
 .btn:hover {
-    background-color: grey;
+  background-color: grey;
 }
 
 .btn:active {
-    transform: translateX(3px);
-    transform: translateY(3px);
-    background-color: red;
+  transform: translateX(3px);
+  transform: translateY(3px);
+  background-color: red;
 }
 
 #board_chess {
-    display: flex;
-    flex-wrap: wrap;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .cell {
-    /*padding: 22px;*/
-    width: 0;
-    height: 0;
+  /*padding: 22px;*/
+  width: 0;
+  height: 0;
 }
 
 .cell_black {
-    background-color: black;
-    color: white;
+  background-color: black;
+  color: white;
 }
 
 .cell_white {
-    background-color: grey;
-    color: white;
+  background-color: grey;
+  color: white;
 }
 
 @media only screen and (max-width: 550px) {
-    .wrapper {
-        margin: 0 0;
-    }
+  .wrapper {
+    margin: 0 0;
+  }
 }
 
 canvas {
-    display: block;
-    border: black solid 1px;
-    height: 150px;
-    width: 300px;
-    margin: 8px;
+  display: block;
+  border: black solid 1px;
+  height: 150px;
+  width: 300px;
+  margin: 8px;
 }
 
 mark {
-    background-color: yellow;
+  background-color: yellow;
 }

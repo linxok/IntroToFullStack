@@ -1,98 +1,98 @@
 <!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>WD_PS2 Javascript + RegExp</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>WD_PS2 Javascript + RegExp</title>
+  <link rel="stylesheet" href="style.css">
 
 </head>
 <body>
 <section class="wrapper">
-    <h1 class="head_main">Разминка</h1>
-    <form class="form">
-        <h3 class="form_head">1. Дана форма с двумя числовыми инпутами.
-            Посчитать сумму чисел в промежутке между введеными пользователем (например от -100 до 100),
-            суммируя только числа которые заканчиваются на 2,3, и 7</h3>
-        <div class="form_wrapper">
-            <input class="form_input" type="number" min="-100" max="100" id="elem1" value="-100">
-            <input class="form_input" type="number" min="-100" max="100" id="elem2" value="100">
-            <button class="btn" type="button" id="btn1">Calculate</button>
-            <output class="label" id="result1">result</output>
-        </div>
-    </form>
-    <form class="form">
-        <h3 class="form_head">2. Пользователь вводит время в секундах. Вывести в формате: hh:mm:ss (01:05:20).
-            Ниже наоборот: пользователь вводит время в формате hh:mm:ss, вывести количество секунд.</h3>
-        <div class="form_wrapper">
-            <div>
-                <input class="form_input" type="number" min="0" max="999999" value="0" id="input_seconds">
-                <button class="btn" type="button" id="calculateTime">Calculate</button>
-                <output class="label" id="timeResult1">result</output>
-            </div>
-            <div>
-                <input class="form_input" type="text" id="input_time" value="00:00:00">
-                <button class="btn" type="button" id="calculateSeconds">Calculate</button>
-                <output class="label" id="timeResult2">result</output>
-            </div>
-        </div>
-    </form>
-    <form class="form">
-        <h3 class="form_head">3) Даны два input[type=datetime-local]. Вычислить промежуток времени
-            прошедший между датами и вывести пользователю сообщение типа:
-            2 year(s), 1 month(s), 3 day(s), 5 hour(s), 10 minute(s), 15 second(s).</h3>
-        <div class="form_wrapper">
-            <input class="form_input" type="datetime-local" id="first_date" value="2018-06-13T01:01">
-            <input class="form_input" type="datetime-local" id="second_date" value="2019-07-14T02:02">
-            <button class="btn" type="button" id="btn_date_interval">Calculate</button>
-            <output class="label" id="date_interval">result</output>
-        </div>
-    </form>
-    <form class="form">
-        <h3 class="form_head"> 4.1 Пользователь вводит габариты шахматной доски (в формате ‘8x8’).
-            Вывести (как бы нарисовать) шахматную доску.</h3>
-        <div class="form_wrapper">
-            <input class="form_input" type="text" id="input_size" value="8x8">
-            <button class="btn" type="button" id="btn_chess">Paint Board</button>
-            <canvas id="canvas_chess"></canvas>
-        </div>
-    </form>
-    <form class="form">
-        <h3 class="form_head"> 4.2 Пользователь вводит габариты шахматной доски (в формате ‘8x8’).
-            Вывести (как бы нарисовать) шахматную доску.</h3>
-        <div class="form_wrapper">
-            <input class="form_input" type="text" id="input_size2" value="8x8">
-            <button class="btn" type="button" id="btn_chess2">Paint Board</button>
-            <div id="board_chess">
-                <div class="cell cell_white" padding="12px"></div>
-                <div class="cell cell_black"></div>
+  <h1 class="head_main">Разминка</h1>
+  <form class="form">
+    <h3 class="form_head">1. Дана форма с двумя числовыми инпутами.
+      Посчитать сумму чисел в промежутке между введеными пользователем (например от -100 до 100),
+      суммируя только числа которые заканчиваются на 2,3, и 7</h3>
+    <div class="form_wrapper">
+      <input class="form_input" type="number" min="-100" max="100" id="elem1" value="-100">
+      <input class="form_input" type="number" min="-100" max="100" id="elem2" value="100">
+      <button class="btn" type="button" id="btn1">Calculate</button>
+      <output class="label" id="result1">result</output>
+    </div>
+  </form>
+  <form class="form">
+    <h3 class="form_head">2. Пользователь вводит время в секундах. Вывести в формате: hh:mm:ss (01:05:20).
+      Ниже наоборот: пользователь вводит время в формате hh:mm:ss, вывести количество секунд.</h3>
+    <div class="form_wrapper">
+      <div>
+        <input class="form_input" type="number" min="0" max="999999" value="0" id="input_seconds">
+        <button class="btn" type="button" id="calculateTime">Calculate</button>
+        <output class="label" id="timeResult1">result</output>
+      </div>
+      <div>
+        <input class="form_input" type="text" id="input_time" value="00:00:00">
+        <button class="btn" type="button" id="calculateSeconds">Calculate</button>
+        <output class="label" id="timeResult2">result</output>
+      </div>
+    </div>
+  </form>
+  <form class="form">
+    <h3 class="form_head">3) Даны два input[type=datetime-local]. Вычислить промежуток времени
+      прошедший между датами и вывести пользователю сообщение типа:
+      2 year(s), 1 month(s), 3 day(s), 5 hour(s), 10 minute(s), 15 second(s).</h3>
+    <div class="form_wrapper">
+      <input class="form_input" type="datetime-local" id="first_date" value="2018-06-13T01:01">
+      <input class="form_input" type="datetime-local" id="second_date" value="2019-07-14T02:02">
+      <button class="btn" type="button" id="btn_date_interval">Calculate</button>
+      <output class="label" id="date_interval">result</output>
+    </div>
+  </form>
+  <form class="form">
+    <h3 class="form_head"> 4.1 Пользователь вводит габариты шахматной доски (в формате ‘8x8’).
+      Вывести (как бы нарисовать) шахматную доску.</h3>
+    <div class="form_wrapper">
+      <input class="form_input" type="text" id="input_size" value="8x8">
+      <button class="btn" type="button" id="btn_chess">Paint Board</button>
+      <canvas id="canvas_chess"></canvas>
+    </div>
+  </form>
+  <form class="form">
+    <h3 class="form_head"> 4.2 Пользователь вводит габариты шахматной доски (в формате ‘8x8’).
+      Вывести (как бы нарисовать) шахматную доску.</h3>
+    <div class="form_wrapper">
+      <input class="form_input" type="text" id="input_size2" value="8x8">
+      <button class="btn" type="button" id="btn_chess2">Paint Board</button>
+      <div id="board_chess">
+        <div class="cell cell_white" padding="12px"></div>
+        <div class="cell cell_black"></div>
 
-            </div>
-        </div>
-    </form>
-    <form class="form">
-        <h3 class="form_head">5. Дан некий textarea, в который пользователь вводит ссылки или ip через запятую.
-            Когда textarea станет неактивным - проверить введены ли ссылки/ip, удалить дичь (то что не ссылки и не ip),
-            и вывести их отсортированным по алфавиту списком ссылок (Пользователю http:// и https:// не показывать, при
-            клике на ссылку открывается новое окно).</h3>
-        <div class="form_wrapper">
-            <textarea class="form_input" id="input_textarea" rows="5" cols="88">https://www.ukr.net, https://www.google.com, 1234444 , мама мыла раму, 192.168.0.1 ,127.0.0.1 </textarea>
-            <ul class="label" id="link_out"></ul>
-        </div>
-    </form>
-    <form class="form">
-        <h3 class="form_head">6. В textarea вводим текст, в input - регулярку или текст. После нажатии кнопки -
-            вывести тот же текст, но в нем все, что подходит под регулярку выделено желтым (подсвечено).
-            (Вот и пригодился тег mark)</h3>
-        <div class="form_wrapper">
-            <label class="label">Input text</label>
-            <textarea class="form_input" id="input_tex" rows="5" cols="88">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A aperiam autem dicta, dolor dolore doloribus fuga incidunt ipsam magnam maxime molestias praesentium repellat saepe tempora totam velit voluptatem. In, numquam?</textarea>
-            <label class="label">Input regular exp.</label>
-            <input class="form_input" type="text" id="regexp" value="[A-Z]|[a,e,i,o]">
-            <button class="btn" type="button" id="btn_regexp" onclick="myRegExp()">GO</button>
-            <output class="label" id="link_regexp"></output>
-        </div>
-    </form>
+      </div>
+    </div>
+  </form>
+  <form class="form">
+    <h3 class="form_head">5. Дан некий textarea, в который пользователь вводит ссылки или ip через запятую.
+      Когда textarea станет неактивным - проверить введены ли ссылки/ip, удалить дичь (то что не ссылки и не ip),
+      и вывести их отсортированным по алфавиту списком ссылок (Пользователю http:// и https:// не показывать, при
+      клике на ссылку открывается новое окно).</h3>
+    <div class="form_wrapper">
+      <textarea class="form_input" id="input_textarea" rows="5" cols="88">https://www.ukr.net, https://www.google.com, 1234444 , мама мыла раму, 192.168.0.1 ,127.0.0.1 </textarea>
+      <ul class="label" id="link_out"></ul>
+    </div>
+  </form>
+  <form class="form">
+    <h3 class="form_head">6. В textarea вводим текст, в input - регулярку или текст. После нажатии кнопки -
+      вывести тот же текст, но в нем все, что подходит под регулярку выделено желтым (подсвечено).
+      (Вот и пригодился тег mark)</h3>
+    <div class="form_wrapper">
+      <label class="label">Input text</label>
+      <textarea class="form_input" id="input_tex" rows="5" cols="88">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A aperiam autem dicta, dolor dolore doloribus fuga incidunt ipsam magnam maxime molestias praesentium repellat saepe tempora totam velit voluptatem. In, numquam?</textarea>
+      <label class="label">Input regular exp.</label>
+      <input class="form_input" type="text" id="regexp" value="[A-Z]|[a,e,i,o]">
+      <button class="btn" type="button" id="btn_regexp" onclick="myRegExp()">GO</button>
+      <output class="label" id="link_regexp"></output>
+    </div>
+  </form>
 </section>
 <script src="main.js"></script>
 </body>
