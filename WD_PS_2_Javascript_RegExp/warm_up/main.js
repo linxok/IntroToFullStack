@@ -51,15 +51,15 @@ document.getElementById('calculateTime').addEventListener('click', () => {
 /*2.2*/
 document.getElementById('calculateSeconds').addEventListener('click', () => {
 
-  let input = document.getElementById('input_time');
-  input = input.value;
-  input = input.split(':');
+  const inputElement = document.getElementById('input_time');
+  let input = inputElement.value;
+  let inputArray = input.split(':');
   const secondsInHour = 3600; // seconds in hour
   const secondsInMinut = secondsInHour / 60; // seconds in minut
 
-  let h = parseInt(input[0]);
-  let m = parseInt(input[1]);
-  let s = parseInt(input[2]);
+  let h = parseInt(inputArray[0]);
+  let m = parseInt(inputArray[1]);
+  let s = parseInt(inputArray[2]);
 
   let out = h * secondsInHour + m * secondsInMinut + s;
 
@@ -77,11 +77,9 @@ document.getElementById('btn_date_interval').addEventListener('click', () => {
   const date1 = new Date(document.getElementById('first_date').value);
   const date2 = new Date(document.getElementById('second_date').value);
 
-  const out = `${date2.getFullYear() - date1.getFullYear()}year(s), ${date2.getMonth() - date1.getMonth()}month(s),
+  document.getElementById('date_interval').innerHTML = `${date2.getFullYear() - date1.getFullYear()}year(s), ${date2.getMonth() - date1.getMonth()}month(s),
         ${date2.getDate() - date1.getDate()}day(s),${date2.getHours() - date1.getHours()}hour(s), ${date2.getMinutes() -
   date1.getMinutes()}minute(s), ${date2.getSeconds() - date1.getSeconds()}second(s)`;
-
-  document.getElementById('date_interval').innerHTML = out;
 
 });
 
@@ -140,7 +138,7 @@ document.getElementById('btn_chess2').addEventListener('click', () => {
 
     // const boardSize = board.clientWidth;
     const cellSize = (99.9999 / col) / 2;
-    console.log(cellSize);
+
     while (board.firstChild) {
       board.firstChild.remove();
     }
@@ -223,7 +221,7 @@ document.getElementById('input_textarea').addEventListener('blur', () => {
 function myRegExp() {
   let text = document.getElementById("input_tex").value;
   const regexp = document.getElementById("regexp").value;
-  // console.log(new RegExp(regexp,'gi'));
+
   text = text.replace(new RegExp(regexp, 'g'), "<mark>$&</mark>");
   document.getElementById("link_regexp").innerHTML = text;
 
