@@ -4,9 +4,8 @@
 суммируя только числа которые заканчиваются на 2,3, и 7*/
 
 document.getElementById('btn1').addEventListener('click', () => {
-  const val1 = parseFloat(document.getElementById('elem1').value);
-  const val2 = parseFloat(document.getElementById('elem2').value);
-
+  let val1 = parseFloat(document.getElementById('elem1').value);
+  let val2 = parseFloat(document.getElementById('elem2').value);
   if (val1 > val2) {
     [val1, val2] = [val2, val1];
   }
@@ -25,27 +24,25 @@ document.getElementById('btn1').addEventListener('click', () => {
     */
 
 /*2.1*/
+
 document.getElementById('calculateTime').addEventListener('click', () => {
+
   const seconds = parseFloat(document.getElementById('input_seconds').value);
   let date = new Date(null);
   date.setSeconds(seconds);
 
-  /*let h = seconds / 3600 ^ 0;
-  let m = (seconds - h * 3600) / 60 ^ 0;
-  let s = seconds - h * 3600 - m * 60;
-  let out = ((h < 10 ? "0" + h : h) + " ч. " + (m < 10 ? "0" + m : m) + " мин. " + (s < 10 ? "0" + s : s) + " сек.");
-  document.getElementById('timeResult1').innerText = out;
-  */
-
-  const convertTime = function (input, separator) {
+  const convertTime = function (input, separator = ':') {
     const pad = function (input) {
       return input < 10 ? "0" + input : input;
     };
+    const secondsInHour = 3600; // seconds in hour
+    const secondsInMinut = secondsInHour / 60; // seconds in minut
+    const secondsInThis =  60; // seconds
     return [
-      pad(Math.floor(input / 3600)),
-      pad(Math.floor(input % 3600 / 60)),
-      pad(Math.floor(input % 60)),
-    ].join(typeof separator !== 'undefined' ? separator : ':');
+      pad(Math.floor(input / secondsInHour)),
+      pad(Math.floor(input % secondsInMinut)),
+      pad(Math.floor(input % secondsInThis)),
+    ].join(separator);
   };
 
   document.getElementById('timeResult1').innerText = convertTime(seconds);
@@ -57,12 +54,14 @@ document.getElementById('calculateSeconds').addEventListener('click', () => {
   let input = document.getElementById('input_time');
   input = input.value;
   input = input.split(':');
+  const secondsInHour = 3600; // seconds in hour
+  const secondsInMinut = secondsInHour / 60; // seconds in minut
 
   let h = parseInt(input[0]);
   let m = parseInt(input[1]);
   let s = parseInt(input[2]);
 
-  let out = h * 60 * 60 + m * 60 + s;
+  let out = h * secondsInHour + m * secondsInMinut + s;
 
   document.getElementById('timeResult2').innerText = `${out} s.`;
 });
@@ -187,7 +186,7 @@ document.getElementById('input_textarea').addEventListener('blur', () => {
     link_out.removeChild(link_out.firstChild);
   }
 
-  let array = input_textarea.value.split(',');
+  let array = document.getElementById('input_textarea').value.split(',');
   array = array.map(item => item.replace(/\s/g, ''));
 
   const regexpIp = /^(([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])\.){3}([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])$/g;
@@ -201,18 +200,15 @@ document.getElementById('input_textarea').addEventListener('blur', () => {
 
   let outputArr = [...arrayIp, ...arrayLink].sort();
 
-  let output_li = document.getElementById("link_out");
-  output_li.innerText = "";
-
   for (let i = 0; i < outputArr.length; i++) {
     let new_li = document.createElement("li");
     let new_link = document.createElement("a");
-    new_link.href = "http://" + outputArr[i];
+    new_link.href =  "//" + outputArr[i]; //  bed idea = "http://"
     new_link.className = "label";
-    new_link.innerText = outputArr[i];
+    new_link.innerText = outputArr[i].toString();
     new_link.target = "_blank";
     new_li.appendChild(new_link);
-    output_li.appendChild(new_li);
+    link_out.appendChild(new_li);
   }
 
 });
