@@ -182,7 +182,8 @@ document.getElementById('btn_chess2').addEventListener('click', () => {
 
 document.getElementById('input_textarea').addEventListener('blur', () => {
   const link_out = document.getElementById('link_out');
-  if (link_out.childNodes.length) {
+
+  while (link_out.firstChild){ // remove oll child elements
     link_out.removeChild(link_out.firstChild);
   }
 
