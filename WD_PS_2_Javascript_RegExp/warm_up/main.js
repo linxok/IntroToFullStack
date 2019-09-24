@@ -74,9 +74,12 @@ document.getElementById('calculateSeconds').addEventListener('click', () => {
 
 
 document.getElementById('btn_date_interval').addEventListener('click', () => {
-  const date1 = new Date(document.getElementById('first_date').value);
-  const date2 = new Date(document.getElementById('second_date').value);
+  let date1 = new Date(document.getElementById('first_date').value);
+  let date2 = new Date(document.getElementById('second_date').value);
 
+  if (date1 > date2) {
+    [date1 , date2] = [date2, date1];
+  }
   document.getElementById('date_interval').innerHTML = `${date2.getFullYear() - date1.getFullYear()}year(s), ${date2.getMonth() - date1.getMonth()}month(s),
         ${date2.getDate() - date1.getDate()}day(s),${date2.getHours() - date1.getHours()}hour(s), ${date2.getMinutes() -
   date1.getMinutes()}minute(s), ${date2.getSeconds() - date1.getSeconds()}second(s)`;
