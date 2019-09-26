@@ -57,7 +57,7 @@ document.getElementById('select_category').addEventListener('change', (event) =>
 });
 
 document.getElementById('search').addEventListener('input', (event) => {
-  tempData = GOODS.filter(entry => entry.name.match(event.target.value));
+  tempData = GOODS.filter((entry) => entry.name.toLowerCase().match(event.target.value.toLowerCase()));
   outputData(tempData);
 });
 
