@@ -1,0 +1,49 @@
+.wrapper {
+  margin: 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+}
+.dropdownMenu {
+  display: flex;
+  padding: 1px;
+  flex-direction: column;
+  border: 1px solid aqua;
+  border-radius: 6px;
+  box-shadow: 0px 0px 4px 2px aqua;
+}
+
+.child {
+  display: none;
+  flex-direction: row;
+  align-items: center;
+  list-style: none;
+  width: 150px;
+  height: 50px;
+  border-bottom: 1px solid azure;
+  background-color: azure;
+}
+
+
+.child img {
+  margin-top: 4px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-left: 10px;
+  background-color: azure;
+}
+
+.child div {
+  margin-left: 10px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.child:hover {
+  cursor: pointer;
+  background: deepskyblue;
+}
+
+.visible {
+  display: flex;
+}
