@@ -19,12 +19,22 @@
   flex-direction: row;
   align-items: center;
   list-style: none;
-  width: 150px;
+  width: 200px;
   height: 50px;
   border-bottom: 1px solid azure;
   background-color: azure;
 }
-
+#select::before {
+  content: "";
+  position: relative;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 6px;
+  border-color: black transparent transparent transparent;
+  left: 170px;
+  top: 30px;
+}
 
 .child img {
   margin-top: 4px;
@@ -37,6 +47,7 @@
 
 .child div {
   margin-left: 10px;
+  width: 120px;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 .child:hover {
