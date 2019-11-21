@@ -77,6 +77,7 @@ document.getElementById('btn_date_interval').addEventListener('click', () => {
   let date1 = new Date(document.getElementById('first_date').value);
   let date2 = new Date(document.getElementById('second_date').value);
 
+  console.log(date1 > date2);
   if (date1 > date2) {
     [date1 , date2] = [date2, date1];
   }

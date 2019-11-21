@@ -22,7 +22,7 @@
   width: 200px;
   height: 50px;
   border-bottom: 1px solid azure;
-  background-color: azure;
+  background-color: white;
 }
 #select::before {
   content: "";
@@ -52,7 +52,7 @@
 }
 .child:hover {
   cursor: pointer;
-  background: deepskyblue;
+  background: aqua;
 }
 
 .visible {
