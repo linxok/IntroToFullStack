@@ -18,7 +18,7 @@
     color: #1abc9c;
 }
 #toTop {
-    width:50px;
+    width: auto;
     border:2px solid #ccc;
     background:#1abc9c;
     text-align:center;

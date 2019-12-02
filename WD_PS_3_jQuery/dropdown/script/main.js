@@ -1,6 +1,6 @@
 const Avatars = [
   {
-    name: 'Glya',
+    name: 'Galya',
     img: './image/avatar/Gelya.png'
   },
   {
@@ -33,23 +33,27 @@ const Avatars = [
   }
 ];
 
-$(document).ready(() => {
-  createOptions(Avatars);
-
-  $('#select').on('click', function () {
-    $(this).find('.child').toggleClass('visible');
+$(document).ready(function () {
+  $("#option").append($("<ul>").attr("class", "list"));
+  Avatars.forEach((element) => {
+    $(".list").append($("<li>").attr("class", "list_item")
+      .append($("<img>").attr("src", element.img).height(24).width(24))
+      .append($("<span>").text(element.name)));
   });
-  $('#select > li').on('click', function () {
-    $("#selected").html($(this).html());
+
+  $(".selected").click(function () {
+    $("#option ul").toggle(200);
+  });
+
+  $(".list_item").click(function () {
+    $(".selected span").html($(this).html());
+    $(".list").hide(200);
+  });
+
+  $(document).click(function (element) {
+    if (! $(element.target).parents().hasClass('wrapper')){
+      $("#option ul").hide(200);
+    }
   });
 
 });
-
-function createOptions(avatars) {
-  let option = $("#select");
-  option.append(`<li class="child visible" id="selected"><div><span>Select Human</span></div></li>`);
-  for (let element of avatars) {
-    option.append(`<li class="child" value='${element.name}' ><img src='${element.img}' alt='${element.img}'><div>${element.name}</div></li>`);
-  }
-
-}
