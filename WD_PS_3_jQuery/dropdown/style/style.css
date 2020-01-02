@@ -6,9 +6,10 @@
   box-sizing: border-box;
 }
 
-#option ul{
+#option ul {
   display: none;
 }
+
 .list_item {
   display: flex;
   align-items: center;
@@ -20,23 +21,26 @@
 .list_item:hover {
   background-color: #777476;
 }
+
 .wrapper {
   position: absolute;
   left: 40px;
   top: 50px;
   min-width: 220px;
-  border:2px solid gray;
+  border: 2px solid gray;
   border-radius: 8px;
   color: grey;
 }
+
 .selected a {
   display: flex;
-  text-decoration:none;
+  text-decoration: none;
   position: relative;
   width: 100%;
   min-height: 45px;
   align-items: center;
 }
+
 .selected a::before {
   content: "";
   position: absolute;
